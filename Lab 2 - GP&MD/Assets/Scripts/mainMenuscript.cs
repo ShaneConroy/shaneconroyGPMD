@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class mainMenuscript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static mainMenuscript instance;
+    private void Awake()
     {
-        
-    }
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+
+        }
     }
 }
+
