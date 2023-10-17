@@ -84,6 +84,11 @@ public class catController : MonoBehaviour
             
             }
 
+            if(Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                state = States.Sliding;
+            }
+
         }
         else if (state == States.Jumping)
         {
@@ -94,8 +99,23 @@ public class catController : MonoBehaviour
         }
         else if (state == States.Sliding)
         {
-            //If moving and left shift is not pressed then run
-            //it no input idle
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                rig.velocity = new Vector2(1.5f, 0);
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                rig.velocity = new Vector2(-1.5f, 0);
+            }
+
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                state = States.Idle;
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                state = States.Idle;
+            }
 
         }
         else if (state == States.Falling)
