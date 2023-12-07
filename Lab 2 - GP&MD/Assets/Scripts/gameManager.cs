@@ -6,5 +6,4 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
     public static int difficulty = 1;
-
 }
