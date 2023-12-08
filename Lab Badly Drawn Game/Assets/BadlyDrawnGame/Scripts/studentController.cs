@@ -49,26 +49,26 @@ public class studentController : MonoBehaviour
             roomNum = Random.Range(0, 7);
             switch (roomNum)
             {
-                case 0:
-                    agent.SetDestination(new Vector3(Random.Range(-3.7f, 0.75f), Random.Range(-2.3f, 0.2f), 1));
+                case 0: // R1
+                    agent.SetDestination(new Vector3(Random.Range(-9.51f, 2.07f), Random.Range(-6.03f, 0.98f), 1));
                     break;
-                case 1:
-                    agent.SetDestination(new Vector3(Random.Range(-8.5f, -6.4f), Random.Range(-1f, 1.7f), 1));
+                case 1: // R2
+                    agent.SetDestination(new Vector3(Random.Range(-21.5f, -15.5f), Random.Range(-2.84f, 4.36f), 1));
                     break;
-                case 2:
-                    agent.SetDestination(new Vector3(Random.Range(-13f, -11f), Random.Range(3f, -0.8f), 1));
+                case 2: // R3
+                    agent.SetDestination(new Vector3(Random.Range(-32.43f, -26.4f), Random.Range(-2.8f, 8.18f), 1));
                     break;
-                case 3:
-                    agent.SetDestination(new Vector3(Random.Range(-7.5f, -2f), Random.Range(5f, 3.2f), 1));
+                case 3: // R4
+                    agent.SetDestination(new Vector3(Random.Range(15.15f, 28.1f), Random.Range(3.82f, 15.66f), 1));
                     break;
-                case 4:
-                    agent.SetDestination(new Vector3(Random.Range(3.1f, 5.3f), Random.Range(1.3f, 6.15f), 1));
+                case 4: // Outside
+                    agent.SetDestination(new Vector3(Random.Range(-19.38f, 0f), Random.Range(6.13f, 14.9f), 1));
                     break;
-                case 5:
-                    agent.SetDestination(new Vector3(Random.Range(6.5f, 11.2f), Random.Range(1.8f, 6.1f), 1));
+                case 5: // Hallway
+                    agent.SetDestination(new Vector3(Random.Range(7.07f, 13.34f), Random.Range(0.46f, 15.54f), 1));
                     break;
-                case 6:
-                    agent.SetDestination(new Vector3(Random.Range(6.5f, 11f), Random.Range(-2.2f, 0.7f), 1));
+                case 6: // Gym
+                    agent.SetDestination(new Vector3(Random.Range(15.29f, 28.04f), Random.Range(-5.79f, 2.41f), 1));
                     break;
             }
             timer = 15f;
